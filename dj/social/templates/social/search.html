@@ -1,0 +1,21 @@
+{% extends "social/base.html" %}
+
+{% block content %}
+<br>
+<div class='main' style="width:500px;">
+
+	<h3>You have searched for "{{ searchPhase }}"</h3>  
+
+     {% if found %}
+	<table class="main">
+     	{% for m in member %}
+            <tr><td><a href="members/?view={{ m.username }}"> {{ m.username }} </a></td></tr>
+        {% endfor %}
+	</table>
+     {% else %}
+     	User not found
+     {% endif %}
+    <br>
+    <br>
+</div>
+{% endblock %}

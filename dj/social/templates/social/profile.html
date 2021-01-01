@@ -1,0 +1,36 @@
+{% extends "social/base.html" %}
+
+{% block content %}
+<div class='main'>
+{% if text %}
+<div class='main_container'>
+<h3>Your Profile</h3>
+{{ text }} <br /><br />
+{% endif %}
+<form method='POST' action='/social/profile/' id='loginForm' name="loginForm" class='bodyform' onsubmit="return loginValidateForm()">
+        	{% csrf_token %}
+            <br />
+            Email <br />
+            <input type="text" name="email" size="50" placeholder="Email:" value="{{ email }}">
+            <br>
+            Gender <br />
+            <p><select name="gender_info" id="gender_info" value="{{ gender }}">
+		<option >Please select ...</option>
+		<option value="Male">Male</option>
+		<option value="Female">Female</option>
+		<option value="Other">Other</option>
+		<option value="NotToSay">I prefer not to say</option>
+		</select>
+	    </p>
+            City <br />
+            <input type="text" name="city" size="50" placeholder="City: {{ city }}" value="{{ city }}">
+		<br>
+		About You <br />
+		<textarea name='text' cols='50' rows='3'>{{ about }}</textarea>
+		<br /><br />
+   		<input type='submit' class="submission" value='Save Profile'>
+        </form>
+</div>
+</div>
+</div>
+{% endblock %}

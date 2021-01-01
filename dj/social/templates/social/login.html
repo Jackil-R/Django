@@ -1,0 +1,32 @@
+{% extends "social/base.html" %}
+
+{% block content %}
+<br />
+<span class='info'>&#8658; You must be logged in to view this page.</span>
+<br>
+<br>
+<div class='main'>
+    {% if loggedin %}
+<br />
+        You are now logged in.
+
+        <p><br />Edit profile information <a href='/social/profile/'>click here</a></p>
+        Please check your <a href='/social/members/?view={{ username }}'>home page</a>.
+        <br><br>
+    {% else %}
+        <h3>Please enter your details to login</h3>
+        <form method='POST' action='/social/login/' id='loginForm' name="loginForm" class='bodyform' onsubmit="return loginValidateForm()">
+        	{% csrf_token %}
+            Username<br />
+            <input id = "input"  type='text' maxlength='16' name='username' onBlur='checkUser(this)'>
+            <span id='infoU'>{{ name }}</span>
+            <br>
+            Password <br />
+            <input id = "input"  type='password' maxlength='16' name='password'>
+            <span id='infoP'>{{ password }}</span><br>
+            <span class='fieldname'>&nbsp;</span>
+            <input type='submit' class='submission' value='Login'>
+        </form>
+    {% endif %}
+</div>
+{% endblock %}

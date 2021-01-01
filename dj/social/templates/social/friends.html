@@ -1,0 +1,66 @@
+{% extends "social/base.html" %}
+
+{% block content %}
+<div class='main'>
+
+
+
+{% if pending %}
+<h3>Pending Requests</h3>
+	<table style="width:500px;" class="main">
+
+	{% for el in pending %}
+		<tr><td ><a href="/social/members/?view={{ el.requestFrom }}"> {{ el.requestFrom }} </a> </td><td align="center"><a href="?accept={{ el.requestFrom }}">Accept</a> | <a href="?decline=	{{ el.requestFrom }}">Decline</a></td></tr>
+	{% endfor %}
+	</table>
+{% endif %}
+
+<h3>Friend recommendation</h3>
+<table style="width:500px;" class="main">
+{% if friends %}
+   {% for fr in friendOfFriend %}
+	{% if fr in following %}
+	You have no recomendations just yet
+	{% elif fr.username in pendingsToFrom %}
+	
+	{% else %}
+	<tr><td><a href="?view={{ fr.username }}"> {{ fr.username }} </a> </td><td > <a href="?request={{ fr.username }}">Send Friend Request</a></td></tr>
+	{% endif %}
+   {% endfor %}
+	{% else %}
+		{% for suggest in friendSuggestion %}
+			{% if suggest in following %}
+     			{% else %}
+			{% if pending %}
+				{% if suggest.username in pendingsToFrom %}
+				{% else %}
+				<tr><td><a href="?view={{ suggest.username }}"> {{ suggest.username }} </a> </td><td><a href="?request={{ suggest.username }}">Send Friend Request</a></td></tr>
+				{% endif %}
+			{% else %}
+			<tr><td><a href="?view={{ suggest.username }}"> {{ suggest.username }} </a><td/><td><a href="?request={{ suggest.username }}">Send Friend Request</a></td></tr>
+			{% endif %}
+			{% endif %}
+		{% endfor %}
+
+{% endif %}
+</table>
+
+
+{% if friends %}
+	<h3>Friends</h3>
+	<table style="width:500px" class="main">
+	{% for member in friends %}
+		<tr><td ><a href="/social/members/?view={{ member.username }}"> {{ member.username }} </a></td>
+		 <td ><a href="?unfriend={{ member.username }}">Unfriend</a></td></tr>
+	{% endfor %}
+		
+	</table>
+
+{% endif %}
+
+<br>
+<br>
+<a class='button' href='/social/messages/?view={{ username }}'>View Your messages</a>
+<br>
+</div>
+{% endblock %}

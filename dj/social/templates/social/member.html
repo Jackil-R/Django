@@ -1,0 +1,15 @@
+{% extends "social/base.html" %}
+
+{% block content %}
+<div class='main'>
+<h3>{{ greeting }} Profile</h3>
+{% if profile %}
+{{ profile }} <br style='clear:left;'><br /><br />
+
+{% endif %}
+<p>Edit profile information <a href='/social/profile/'>click here</a></p>
+<a class='button' href='/social/messages/?view={{ view_user }}'>View {{ greeting }} messages</a>
+<br>
+<br>
+</div>
+{% endblock %}

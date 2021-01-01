@@ -1,0 +1,193 @@
+/* styles.css */
+
+* {
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size  :14pt;
+}
+
+body {
+  width     :100%;
+  background:white;
+  margin: 0;
+  
+}
+
+html {
+  background:#fff;
+}
+
+li a{
+font-size  :18pt;
+}
+
+li :hover {
+  border-bottom:3px solid #bbb;
+  border-bottom-color: #1DA1F2;
+}
+ 
+.appname {
+  background :#eb8;
+  color      :white;
+  height:210px;
+	background-image: url("/static/social/background.png");
+}
+#appdiv{
+  font-family: helvetica;
+  font-size  :50pt;
+  margin-left:40%;
+}
+.fieldname {
+  margin: 0 auto; 
+  float:center;
+  width:120px;
+  text-align: center;
+  
+}
+
+.main {
+  width: 50%;
+  margin: 0 auto; 
+  text-align: -webkit-center;
+  text-align: center;
+  background-color: #D8D8D8;
+  border-radius: 46px 0px 45px 0px;
+  -moz-border-radius: 46px 0px 45px 0px;
+  -webkit-border-radius: 46px 0px 45px 0px;
+  border: 2px dashed white;
+  padding-bottom: 1%;
+}
+.main_container {
+    padding-left: 10%;
+    text-align: left;
+}
+.info {
+  background :#1da1f2;
+  color      :white;
+  margin: 0 auto; 
+  border     :1px solid green;
+  padding    :5px 10px;
+  margin-left:40%; 
+  border-radius: 8px;
+}
+
+.subhead {
+  font-weight:bold;
+}
+
+.taken, .error {
+  color:red;
+}
+
+.available {
+  color:green;
+}
+
+.whisper {
+  font-style:italic;
+  color     :#006600;
+}
+input{
+width: 206px;
+}
+#menusubmit{
+  height:100%;
+  margin-top:2%;
+  margin-left:3%;
+  margin-bottom:2%;
+  background: transparent;
+  border: none !important;
+  font-size: 0;
+  width: 50%;
+}
+#searcher{
+  height:10%;
+  width:20%;
+}
+.submission{
+  width: 80% !important;
+  background-color: #1da1f2;
+  color:white;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 12px 16px;
+  border:1px;
+  border-radius: 8px;
+}
+#topform{
+display: inline-flex;
+margin-left:20%;
+}
+#logo {
+height:50px;
+width:50px
+border:none;
+margin-left:5%;
+margin-top: 20px;
+}
+#menu{
+background-color:white !important;
+}
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(97, 136, 207, 1);
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 34px;
+    border-width: 0px;
+    border-radius: 3px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(97, 136, 207, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(97, 136, 207, 1);
+    background-color: rgba(255, 255, 255, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(97, 136, 207, 1);
+    background-color: rgba(231, 231, 231, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #ddd;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #888;
+}
+media="screen"
+.navbar-form:before, .navbar-form:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+@media (max-width: 600px)
+.#appdiv{
+  font-family: helvetica;
+  font-size  :10pt;
+  margin-left:40%;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+.bodyform{
+ width:40%;
+ padding-left: 30%;
+ text-align: center;
+
+}
+#menulist{
+float: none;
+display:inline-block;
+width;100%;
+}
